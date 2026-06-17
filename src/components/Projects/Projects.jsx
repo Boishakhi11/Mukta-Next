@@ -2,8 +2,8 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { Fade } from "react-awesome-reveal";
+import ShineLink from "../Motion/ShineLink";
 import Tilt from "../Motion/Tilt";
 import Magnetic from "../Motion/Magnetic";
 
@@ -26,9 +26,8 @@ const filters = [
   "React",
   "Node.js",
   "MongoDB",
-  "Firebase",
   "TypeScript",
-  "AI Development",
+  "JavaScript",
 ];
 
 const Projects = () => {
@@ -43,9 +42,9 @@ const Projects = () => {
     <section id="projects" className="py-20 bg-base-200">
       <div className="w-12/12 mx-auto">
         <Fade direction="up" duration={650}>
-          <div className="mb-12 flex flex-col justify-center items-center text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">My Works</h2>
-            <p className="max-w-3xl text-base-content/70 text-base md:text-lg leading-8">
+          <div className="mb-10 flex flex-col justify-center items-center text-center">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-3">My Works</h2>
+            <p className="max-w-xl text-base-content/60 text-sm md:text-[15px] leading-7">
               Here are some of my recent projects built with modern frontend and full-stack
               technologies — clean UI, practical features, and real user-focused experiences.
             </p>
@@ -58,10 +57,10 @@ const Projects = () => {
               <Magnetic key={filter} strength={0.16} max={9}>
                 <button
                   onClick={() => setActiveFilter(filter)}
-                  className={`px-5 py-2 rounded-full text-sm font-medium transition ${
+                  className={`px-4 py-1.5 rounded-full text-[13px] font-medium transition ${
                     activeFilter === filter
-                      ? "bg-primary text-primary-content shadow"
-                      : "bg-base-100 hover:bg-base-300"
+                      ? "bg-primary text-primary-content shadow-sm"
+                      : "bg-base-100 text-base-content/65 hover:bg-base-300"
                   }`}
                   data-cursor="hover"
                 >
@@ -80,10 +79,10 @@ const Projects = () => {
                 className="rounded-2xl h-full flex flex-col"
                 maxTilt={7}
               >
-                <article className="group rounded-2xl bg-base-100 border border-base-300/80 shadow-md hover:-translate-y-1 hover:shadow-2xl transition duration-300 flex flex-col h-full overflow-hidden">
+                <article className="group rounded-2xl bg-base-100 border border-base-300/80 shadow-md hover:-translate-y-1 hover:shadow-2xl transition duration-300 flex flex-col overflow-hidden" style={{height: "420px"}}>
 
-                  {/* Image */}
-                  <div className="relative h-48 w-full overflow-hidden bg-base-200">
+                  {/* Image — fixed height so all cards are identical */}
+                  <div className="relative h-44 w-full shrink-0 overflow-hidden bg-base-200">
                     <Image
                       src={imageMap[project.imageSrc]}
                       alt={project.title}
@@ -95,12 +94,18 @@ const Projects = () => {
 
                   {/* Content */}
                   <div className="p-5 flex flex-col grow">
-                    <h3 className="text-lg font-bold text-base-content leading-snug mb-3">
+                    {/* Centred title */}
+                    <h3 className="text-base font-bold text-base-content text-center leading-snug mb-3">
                       {project.title}
                     </h3>
 
+                    {/* 2-line summary */}
+                    <p className="text-xs text-base-content/65 leading-5 text-center line-clamp-2 mb-3">
+                      {project.summary}
+                    </p>
+
                     {/* Top 3 tech badges */}
-                    <div className="flex flex-wrap gap-1.5 mb-4">
+                    <div className="flex flex-wrap justify-center gap-1.5 mb-4">
                       {project.tech.slice(0, 3).map((t) => (
                         <span
                           key={t}
@@ -117,13 +122,13 @@ const Projects = () => {
                     </div>
 
                     <div className="mt-auto">
-                      <Link
+                      <ShineLink
                         href={`/projects/${project.slug}`}
                         className="btn btn-primary w-full rounded-full min-h-10 h-10 text-sm"
                         data-cursor="hover"
                       >
                         View Details
-                      </Link>
+                      </ShineLink>
                     </div>
                   </div>
 

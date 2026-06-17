@@ -88,11 +88,11 @@ const Skills = () => {
     <section id="skills" className="py-20 px-6 bg-base-200">
       <div className="max-w-7xl mx-auto">
         <Fade direction="up" duration={650}>
-          <div className="text-center mb-14">
-            <h2 className="text-4xl md:text-5xl font-bold text-center">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center">
               Skills &amp; Technologies
             </h2>
-            <p className="mt-4 max-w-2xl mx-auto text-base-content/70 mb-4">
+            <p className="mt-3 max-w-xl mx-auto text-sm text-base-content/60 leading-7 mb-4">
               I focus on building clean, responsive user-friendly interfaces and
               improving user experience with modern frontend tools.
             </p>
@@ -109,11 +109,11 @@ const Skills = () => {
           <div className="grid gap-6 lg:grid-cols-2">
             {skillGroups.map((group) => (
               <Tilt key={group.title} className="rounded-2xl h-full" maxTilt={5}>
-                <article className="group h-full rounded-2xl bg-base-100 p-6 md:p-7 shadow-sm hover:shadow-xl transition duration-300 border border-base-300 hover:border-primary/30">
-                  <div className={`mb-5 h-1.5 w-16 rounded-full ${group.accentClass}`}></div>
-                  <div className="mb-6">
-                    <h3 className="text-2xl font-bold text-base-content">{group.title}</h3>
-                    <p className="mt-2 text-sm md:text-base text-base-content/70 leading-7">
+                <article className="group h-full rounded-2xl bg-base-100 p-5 md:p-6 shadow-sm hover:shadow-xl transition duration-300 border border-base-300 hover:border-primary/30">
+                  <div className={`mb-4 h-1 w-10 rounded-full ${group.accentClass}`}></div>
+                  <div className="mb-5">
+                    <h3 className="text-lg font-bold text-base-content">{group.title}</h3>
+                    <p className="mt-1 text-[13px] text-base-content/55 leading-6">
                       {group.subtitle}
                     </p>
                   </div>

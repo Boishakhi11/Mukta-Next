@@ -19,7 +19,7 @@ const About = () => {
     <section id="about" className="bg-base-200 py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <Zoom triggerOnce duration={550}>
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center mb-10">
             About Me
           </h2>
         </Zoom>
@@ -38,15 +38,15 @@ const About = () => {
           <Fade triggerOnce duration={650} delay={120}>
             <div>
               <Fade triggerOnce cascade damping={0.08} duration={350}>
-                <div className="flex flex-wrap gap-3 mb-8">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {tabs.map((tab) => (
                     <button
                       key={tab}
                       onClick={() => setActiveTab(tab)}
-                      className={`px-5 py-3 rounded-xl font-medium transition ${
+                      className={`px-4 py-2 rounded-xl text-sm font-medium transition ${
                         activeTab === tab
-                          ? "bg-base-100 text-primary shadow-md"
-                          : "text-base-content hover:text-primary"
+                          ? "bg-base-100 text-primary shadow-sm"
+                          : "text-base-content/70 hover:text-primary"
                       }`}
                     >
                       {tab.charAt(0).toUpperCase() + tab.slice(1)}
@@ -58,11 +58,11 @@ const About = () => {
               <Zoom key={activeTab} duration={320} fraction={0.08}>
                 <div>
                   {activeTab === "about" && (
-                    <div className="bg-base-100 rounded-3xl p-8 shadow-md border border-base-300">
-                      <p className="text-lg font-semibold mb-4">
+                    <div className="bg-base-100 rounded-3xl p-6 shadow-md border border-base-300">
+                      <p className="text-base font-semibold mb-3">
                         Hi, This is Boishakhi.
                       </p>
-                      <div className="space-y-5 text-base-content/75 leading-8">
+                      <div className="space-y-4 text-base-content/65 leading-7 text-[15px]">
                         <p>
                           Full-Stack Software Engineer with a Master&apos;s in
                           Applied Computer Science from Høgskolen i Østfold,
@@ -96,7 +96,7 @@ const About = () => {
                           org: "Innoscribe",
                           period: "November 2025 – April 2026 | Oslo, Norway",
                           body: (
-                            <p className="text-base-content/75 leading-8">
+                            <p className="text-[13px] text-base-content/65 leading-6">
                               Worked as a Frontend Developer with additional
                               responsibilities in Quality Assurance, contributing
                               to UI enhancement, bug fixing, and system quality.
@@ -112,7 +112,7 @@ const About = () => {
                           org: "Media Mondays Oslo",
                           period: "November 2024 – October 2025 | Oslo, Norway",
                           body: (
-                            <p className="text-base-content/75 leading-8">
+                            <p className="text-[13px] text-base-content/65 leading-6">
                               Managed digital data and supported technical event
                               operations. Also contributed to market and audience
                               research to support engagement and communication
@@ -125,7 +125,7 @@ const About = () => {
                           org: "DataSoft System Limited",
                           period: "May 2019 – August 2019 | Dhaka, Bangladesh",
                           body: (
-                            <p className="text-base-content/75 leading-8">
+                            <p className="text-[13px] text-base-content/65 leading-6">
                               Executed test cases, reported defects, and gained
                               strong experience in interface quality, user
                               behavior, and collaboration across software teams
@@ -139,10 +139,10 @@ const About = () => {
                             <FaBriefcase className="text-primary text-2xl" />
                             <div className="w-[2px] flex-1 bg-primary/40 mt-2"></div>
                           </div>
-                          <div className="bg-base-100 rounded-3xl p-6 shadow-md border border-base-300 w-full">
-                            <h3 className="text-2xl font-semibold mb-2">{job.title}</h3>
-                            <p className="text-primary font-medium mb-1">{job.org}</p>
-                            <p className="text-sm text-base-content/60 mb-4">{job.period}</p>
+                          <div className="bg-base-100 rounded-3xl p-5 shadow-md border border-base-300 w-full">
+                            <h3 className="text-base font-semibold mb-1">{job.title}</h3>
+                            <p className="text-primary text-sm font-medium mb-1">{job.org}</p>
+                            <p className="text-xs text-base-content/50 mb-3">{job.period}</p>
                             {job.body}
                           </div>
                         </div>
@@ -171,11 +171,11 @@ const About = () => {
                             <FaUserGraduate className="text-primary text-2xl" />
                             <div className="w-[2px] flex-1 bg-primary/40 mt-2"></div>
                           </div>
-                          <div className="bg-base-100 rounded-3xl p-6 shadow-md border border-base-300 w-full">
-                            <h3 className="text-2xl font-semibold mb-2">{edu.degree}</h3>
-                            <p className="text-primary font-medium mb-1">{edu.school}</p>
-                            <p className="text-sm text-base-content/60 mb-4">{edu.period}</p>
-                            <p className="text-base-content/75 leading-8">{edu.body}</p>
+                          <div className="bg-base-100 rounded-3xl p-5 shadow-md border border-base-300 w-full">
+                            <h3 className="text-base font-semibold mb-1">{edu.degree}</h3>
+                            <p className="text-primary text-sm font-medium mb-1">{edu.school}</p>
+                            <p className="text-xs text-base-content/50 mb-3">{edu.period}</p>
+                            <p className="text-[13px] text-base-content/65 leading-6">{edu.body}</p>
                           </div>
                         </div>
                       ))}
@@ -183,37 +183,37 @@ const About = () => {
                   )}
 
                   {activeTab === "achievements" && (
-                    <div className="space-y-8">
-                      <div className="bg-base-100 rounded-3xl p-6 shadow-md border border-base-300 w-full">
-                        <h3 className="text-2xl font-semibold mb-4 text-primary">
+                    <div className="space-y-5">
+                      <div className="bg-base-100 rounded-3xl p-5 shadow-md border border-base-300 w-full">
+                        <h3 className="text-base font-semibold mb-3 text-primary">
                           Certifications & Courses
                         </h3>
-                        <ul className="list-disc list-inside text-base-content/75 leading-8 space-y-2">
+                        <ul className="list-disc list-inside text-[13px] text-base-content/65 leading-6 space-y-2">
                           <li>Microsoft Certified - Azure Fundamentals</li>
                           <li>Microsoft Certified - Security, Compliance &amp; Identity Fundamentals</li>
                         </ul>
                       </div>
 
-                      <div className="bg-base-100 rounded-3xl p-6 shadow-md border border-base-300 w-full">
-                        <h3 className="text-2xl font-semibold mb-4 text-primary">
+                      <div className="bg-base-100 rounded-3xl p-5 shadow-md border border-base-300 w-full">
+                        <h3 className="text-base font-semibold mb-3 text-primary">
                           Publications
                         </h3>
-                        <div className="space-y-6">
+                        <div className="space-y-5">
                           <div>
-                            <h4 className="font-semibold text-lg">
+                            <h4 className="text-sm font-semibold leading-snug">
                               Gamification in Learning Management Systems: A Systematic Literature Review (2025)
                             </h4>
-                            <p className="text-sm text-base-content/60 mb-2">Co-author — (Information, MDPI)</p>
-                            <p className="text-base-content/75">
+                            <p className="text-xs text-base-content/50 mt-1 mb-1">Co-author — (Information, MDPI)</p>
+                            <p className="text-[13px] text-base-content/65 leading-6">
                               Focused on gamification techniques and user engagement in digital learning platforms
                             </p>
                           </div>
                           <div>
-                            <h4 className="font-semibold text-lg">
+                            <h4 className="text-sm font-semibold leading-snug">
                               A Collaborative Digital Platform for Charity Thrift Store Workers (2024)
                             </h4>
-                            <p className="text-sm text-base-content/60 mb-2">Co-author — (IARIA Conference)</p>
-                            <p className="text-base-content/75">
+                            <p className="text-xs text-base-content/50 mt-1 mb-1">Co-author — (IARIA Conference)</p>
+                            <p className="text-[13px] text-base-content/65 leading-6">
                               Research on collaborative systems and user centered design in real world applications
                             </p>
                           </div>

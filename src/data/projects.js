@@ -7,6 +7,7 @@ export const projectsData = [
       "A responsive pet service platform for booking winter care services for pets in Norway.",
     tech: [
       "React 19",
+      "JavaScript",
       "React Router 7",
       "Tailwind CSS 4",
       "DaisyUI",
@@ -40,6 +41,7 @@ export const projectsData = [
       "A full-stack civic issue reporting and management platform with role-based dashboards for citizens, staff, and admins.",
     tech: [
       "React 18",
+      "JavaScript",
       "React Router v6",
       "TanStack Query v5",
       "Firebase Auth",
@@ -79,6 +81,7 @@ export const projectsData = [
       "A full-stack secondhand marketplace with product listings, bidding, and personal dashboards for buyers and sellers.",
     tech: [
       "React",
+      "JavaScript",
       "React Router",
       "Node.js",
       "Express.js",

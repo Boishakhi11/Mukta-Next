@@ -12,16 +12,16 @@ const Navbar = () => {
   ];
 
   const linkClass =
-    "relative text-lg font-semibold text-base-content transition-colors duration-300 hover:text-primary after:absolute after:left-0 after:-bottom-1 after:h-[3px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full";
+    "relative text-[15px] font-medium text-base-content/80 transition-colors duration-300 hover:text-primary after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full";
 
   return (
     <header className="fixed top-0 left-0 z-50 w-full glass-nav">
-      <div className="w-11/12 mx-auto h-20 flex items-center justify-between">
+      <div className="w-11/12 mx-auto h-16 flex items-center justify-between">
         {/* Logo */}
         <Magnetic strength={0.18} max={10}>
           <a
             href="#home"
-            className="text-2xl md:text-3xl orbitron italic font-bold text-primary"
+            className="text-xl md:text-2xl orbitron italic font-bold text-primary tracking-wide"
             data-cursor="hover"
           >
             BOISHAKHI
@@ -29,9 +29,9 @@ const Navbar = () => {
         </Magnetic>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6">
           <nav>
-            <ul className="flex items-center gap-8">
+            <ul className="flex items-center gap-6">
               {navItems.map((item) => (
                 <li key={item.name}>
                   <Magnetic strength={0.14} max={8}>

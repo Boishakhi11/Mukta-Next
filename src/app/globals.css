@@ -108,6 +108,13 @@ body,
   font-family: var(--font-inter), "Inter", sans-serif;
 }
 
+body {
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 h1,
 h2,
 h3,

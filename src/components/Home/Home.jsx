@@ -25,10 +25,10 @@ const Home = () => {
         style={{ animationDelay: "4s" }}
       ></div>
 
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 text-center">
-        <div className="flex flex-col items-center py-12 px-2 md:px-8">
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-6 text-center">
+        <div className="flex flex-col items-center py-16 px-2 md:px-8">
           <Fade direction="up" duration={800} damping={0.1}>
-            <h1 className="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight text-base-content">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight text-base-content">
               Hello, I&apos;m{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent inline-block pb-2">
                 Boishakhi
@@ -37,9 +37,9 @@ const Home = () => {
           </Fade>
 
           <Fade direction="up" duration={800} delay={100}>
-            <h2 className="mt-3 text-2xl md:text-4xl font-semibold text-base-content/80 min-h-[40px] md:min-h-[48px]">
+            <h2 className="mt-4 text-xl md:text-2xl font-medium text-base-content/65 min-h-8 md:min-h-9">
               I&apos;m a{" "}
-              <span className="text-primary border-b-4 border-primary/30">
+              <span className="text-primary border-b-2 border-primary/30">
                 <Typewriter
                   words={["Software Engineer", "Full-Stack Developer", "Researcher"]}
                   loop={0}
@@ -54,7 +54,7 @@ const Home = () => {
           </Fade>
 
           <Fade direction="up" duration={800} delay={200}>
-            <p className="mt-3 max-w-2xl mx-auto text-base md:text-lg text-base-content/70 leading-8">
+            <p className="mt-5 max-w-xl mx-auto text-[15px] md:text-base text-base-content/60 leading-7">
               With a background in Computer Science and Engineering, I build
               applications with a strong focus on reliability, usability, and
               performance. I combine testing mindset with development skills to
@@ -63,7 +63,7 @@ const Home = () => {
           </Fade>
 
           <Fade direction="up" duration={800} delay={260}>
-            <div className="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm md:text-base font-medium text-base-content/75">
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[13px] md:text-sm font-medium text-base-content/60">
               <Magnetic strength={0.18} max={8}>
                 <a
                   href="mailto:bgmukta11@gmail.com"
@@ -113,13 +113,13 @@ const Home = () => {
           </Fade>
 
           <Fade direction="up" duration={800} delay={380}>
-            <div className="mt-6 flex flex-wrap justify-center gap-4 w-full sm:w-auto">
+            <div className="mt-8 flex flex-wrap justify-center gap-3 w-full sm:w-auto">
               <Magnetic strength={0.2} max={10}>
                 <button
                   onClick={() => {
                     document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className="btn btn-primary btn-lg px-8 rounded-full shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 transition-all border-none"
+                  className="btn btn-primary px-8 h-11 min-h-11 rounded-full text-sm font-semibold shadow-md shadow-primary/25 hover:shadow-lg hover:shadow-primary/35 transition-all border-none"
                   data-cursor="hover"
                 >
                   See My Works
@@ -130,11 +130,11 @@ const Home = () => {
                 <a
                   href="/BoishakhiGh_CV.pdf"
                   download
-                  className="btn btn-outline btn-lg px-8 rounded-full border-2 hover:bg-base-content hover:text-base-100 transition-all flex items-center gap-2"
+                  className="btn btn-outline px-8 h-11 min-h-11 rounded-full text-sm font-semibold border hover:bg-base-content hover:text-base-100 transition-all flex items-center gap-2"
                   data-cursor="hover"
                 >
                   Download CV
-                  <MdOutlineFileDownload className="text-2xl" />
+                  <MdOutlineFileDownload className="text-lg" />
                 </a>
               </Magnetic>
             </div>
