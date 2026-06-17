@@ -83,6 +83,15 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes skills-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-25%); }
+}
+
+.marquee-row:hover .marquee-track {
+  animation-play-state: paused;
+}
+
 /* Smooth theme transitions */
 *,
 *::before,
