@@ -27,11 +27,25 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-10 items-start">
           <Zoom triggerOnce duration={650} delay={80}>
             <div className="flex justify-center items-center">
-              <Image
-                src={profile}
-                alt="Boishakhi"
-                className="w-full max-w-md rounded-3xl object-cover shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
-              />
+              {/* Circular frame: white ring → coloured backdrop → photo */}
+              <div
+                className="relative w-72 h-72 md:w-80 md:h-80 rounded-full shadow-xl shadow-base-content/15 hover:-translate-y-3 hover:shadow-2xl shrink-0"
+                style={{ transition: "transform 0.45s cubic-bezier(0.2,0.8,0.2,1), box-shadow 0.45s ease" }}
+              >
+                {/* White outer ring */}
+                <div className="absolute inset-0 rounded-full bg-white p-3 shadow-xl">
+                  {/* Coloured background circle */}
+                  <div className="w-full h-full rounded-full overflow-hidden relative" style={{ background: "#b87a7a" }}>
+                    <Image
+                      src={profile}
+                      alt="Boishakhi"
+                      fill
+                      className="object-cover object-top"
+                      sizes="(max-width: 768px) 288px, 320px"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </Zoom>
 
