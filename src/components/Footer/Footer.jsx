@@ -6,7 +6,7 @@ const socials = [
   { label: "Email",    href: "mailto:bgmukta11@gmail.com",                icon: <FaEnvelope />,  external: false },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/boishakhimukta/", icon: <FaLinkedin />, external: true },
   { label: "GitHub",   href: "https://github.com/boishakhi-mukta",          icon: <FaGithub />,   external: true },
-  { label: "WhatsApp", href: "https://wa.me/4748685891",                     icon: <FaWhatsapp />, external: true },
+  { label: "WhatsApp", href: "https://wa.me/4746529015",                     icon: <FaWhatsapp />, external: true },
 ];
 
 const Footer = () => (

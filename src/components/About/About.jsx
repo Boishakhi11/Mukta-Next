@@ -2,11 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import {
-  FaUserGraduate,
-  FaBriefcase,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { FaUserGraduate, FaBriefcase, FaWhatsapp } from "react-icons/fa";
 import { Fade, Zoom } from "react-awesome-reveal";
 import profile from "../../assets/Mukta (1).jpg";
 
@@ -30,12 +26,18 @@ const About = () => {
               {/* Circular frame: white ring → coloured backdrop → photo */}
               <div
                 className="relative w-72 h-72 md:w-80 md:h-80 rounded-full shadow-xl shadow-base-content/15 hover:-translate-y-3 hover:shadow-2xl shrink-0"
-                style={{ transition: "transform 0.45s cubic-bezier(0.2,0.8,0.2,1), box-shadow 0.45s ease" }}
+                style={{
+                  transition:
+                    "transform 0.45s cubic-bezier(0.2,0.8,0.2,1), box-shadow 0.45s ease",
+                }}
               >
                 {/* White outer ring */}
                 <div className="absolute inset-0 rounded-full bg-white p-3 shadow-xl">
                   {/* Coloured background circle */}
-                  <div className="w-full h-full rounded-full overflow-hidden relative" style={{ background: "#b87a7a" }}>
+                  <div
+                    className="w-full h-full rounded-full overflow-hidden relative"
+                    style={{ background: "#b87a7a" }}
+                  >
                     <Image
                       src={profile}
                       alt="Boishakhi"
@@ -90,7 +92,7 @@ const About = () => {
                         </p>
                         <div className="pt-3">
                           <a
-                            href="https://wa.me/4748685891"
+                            href="https://wa.me/+4746529015"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn border-primary p-2"
@@ -112,12 +114,30 @@ const About = () => {
                           body: (
                             <p className="text-[13px] text-base-content/65 leading-6">
                               Worked as a Frontend Developer with additional
-                              responsibilities in Quality Assurance, contributing
-                              to UI enhancement, bug fixing, and system quality.
-                              <li>Built and maintained a library of reusable components following modern component based architecture patterns.</li>
-                              <li>Delivered data driven UI features by integrating REST APIs and managing complex application state for dynamic, real time interfaces.</li>
-                              <li>Optimised rendering performance through efficient component design, reducing unnecessary re-renders across key application flows.</li>
-                              <li>Collaborated across design, backend, and QA in a cross-functional team during full product launch cycle, contributing to usability testing and iterative UI improvements.</li>
+                              responsibilities in Quality Assurance,
+                              contributing to UI enhancement, bug fixing, and
+                              system quality.
+                              <li>
+                                Built and maintained a library of reusable
+                                components following modern component based
+                                architecture patterns.
+                              </li>
+                              <li>
+                                Delivered data driven UI features by integrating
+                                REST APIs and managing complex application state
+                                for dynamic, real time interfaces.
+                              </li>
+                              <li>
+                                Optimised rendering performance through
+                                efficient component design, reducing unnecessary
+                                re-renders across key application flows.
+                              </li>
+                              <li>
+                                Collaborated across design, backend, and QA in a
+                                cross-functional team during full product launch
+                                cycle, contributing to usability testing and
+                                iterative UI improvements.
+                              </li>
                             </p>
                           ),
                         },
@@ -128,9 +148,9 @@ const About = () => {
                           body: (
                             <p className="text-[13px] text-base-content/65 leading-6">
                               Managed digital data and supported technical event
-                              operations. Also contributed to market and audience
-                              research to support engagement and communication
-                              efforts.
+                              operations. Also contributed to market and
+                              audience research to support engagement and
+                              communication efforts.
                             </p>
                           ),
                         },
@@ -154,9 +174,15 @@ const About = () => {
                             <div className="w-[2px] flex-1 bg-primary/40 mt-2"></div>
                           </div>
                           <div className="bg-base-100 rounded-3xl p-5 shadow-md border border-base-300 w-full">
-                            <h3 className="text-base font-semibold mb-1">{job.title}</h3>
-                            <p className="text-primary text-sm font-medium mb-1">{job.org}</p>
-                            <p className="text-xs text-base-content/50 mb-3">{job.period}</p>
+                            <h3 className="text-base font-semibold mb-1">
+                              {job.title}
+                            </h3>
+                            <p className="text-primary text-sm font-medium mb-1">
+                              {job.org}
+                            </p>
+                            <p className="text-xs text-base-content/50 mb-3">
+                              {job.period}
+                            </p>
                             {job.body}
                           </div>
                         </div>
@@ -175,8 +201,10 @@ const About = () => {
                         },
                         {
                           degree: "Bachelor in Computer Science & Engineering",
-                          school: "International University of Business, Agriculture & Technology",
-                          period: "January 2015 – December 2019 | Dhaka, Bangladesh",
+                          school:
+                            "International University of Business, Agriculture & Technology",
+                          period:
+                            "January 2015 – December 2019 | Dhaka, Bangladesh",
                           body: "Built a strong foundation in programming, databases, data structures, and software development fundamentals.",
                         },
                       ].map((edu) => (
@@ -186,10 +214,18 @@ const About = () => {
                             <div className="w-[2px] flex-1 bg-primary/40 mt-2"></div>
                           </div>
                           <div className="bg-base-100 rounded-3xl p-5 shadow-md border border-base-300 w-full">
-                            <h3 className="text-base font-semibold mb-1">{edu.degree}</h3>
-                            <p className="text-primary text-sm font-medium mb-1">{edu.school}</p>
-                            <p className="text-xs text-base-content/50 mb-3">{edu.period}</p>
-                            <p className="text-[13px] text-base-content/65 leading-6">{edu.body}</p>
+                            <h3 className="text-base font-semibold mb-1">
+                              {edu.degree}
+                            </h3>
+                            <p className="text-primary text-sm font-medium mb-1">
+                              {edu.school}
+                            </p>
+                            <p className="text-xs text-base-content/50 mb-3">
+                              {edu.period}
+                            </p>
+                            <p className="text-[13px] text-base-content/65 leading-6">
+                              {edu.body}
+                            </p>
                           </div>
                         </div>
                       ))}
@@ -204,10 +240,12 @@ const About = () => {
                         </h3>
                         <ul className="list-disc list-inside text-[13px] text-base-content/65 leading-6 space-y-2">
                           <li>Microsoft Certified - Azure Fundamentals</li>
-                          <li>Microsoft Certified - Security, Compliance &amp; Identity Fundamentals</li>
+                          <li>
+                            Microsoft Certified - Security, Compliance &amp;
+                            Identity Fundamentals
+                          </li>
                         </ul>
                       </div>
-
                     </div>
                   )}
                 </div>
